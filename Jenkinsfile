@@ -20,8 +20,8 @@ pipeline {
         stage('Build & deploy') {
             steps {
                 script {
-                    // Load and execute the Jenkinsfile from another repository
-                    load 'docker-compose up -d'
+                    // Execute the Docker Compose command
+                    sh 'docker-compose up -d'
                 }
             }
         }
